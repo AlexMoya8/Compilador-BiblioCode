@@ -1,0 +1,37 @@
+# Programa 2 - Condicionales y ciclos
+variable cantidad = 3;
+variable disponible = verdadero;
+
+si disponible == verdadero y cantidad > 0 entonces
+    imprimir("Hay ejemplares disponibles");
+    si cantidad > 2 entonces
+        imprimir("Hay mas de dos ejemplares");
+    sino
+        imprimir("Quedan pocos ejemplares");
+    fin
+sino
+    imprimir("No hay ejemplares disponibles");
+fin
+
+si no (cantidad == 0) entonces
+    imprimir("El catalogo tiene movimiento");
+fin
+
+ciclo 3 veces
+    imprimir("Consulta de libros");
+fin
+
+variable contador = cantidad;
+ciclo mientras contador > 0
+    imprimir("Quedan: ", contador);
+    contador = contador - 1;
+    si contador == 1 entonces
+        imprimir("Ultimo ejemplar");
+    fin
+fin
+
+ciclo 2 veces
+    ciclo 2 veces
+        imprimir("Fila de estanteria");
+    fin
+fin
