@@ -1,0 +1,6 @@
+# Programa 6 - Error semantico: tipo incompatible en una asignacion
+variable cantidad = 5;
+variable titulo = "El principito";
+imprimir("Ejemplares: ", cantidad);
+cantidad = "diez";   # ERROR SEMANTICO: se asigna un texto a una variable entera
+imprimir(cantidad);

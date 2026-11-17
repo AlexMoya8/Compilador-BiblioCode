@@ -1,0 +1,5 @@
+# Programa 5 - Error sintactico: falta el punto y coma
+variable cantidad = 3;
+si cantidad > 0 entonces
+    imprimir("Hay ejemplares disponibles")   # ERROR SINTACTICO: falta el ; al final
+fin

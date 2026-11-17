@@ -1,0 +1,25 @@
+# Programa 1 - Variables, tipos y operaciones matematicas
+variable ejemplares = 8;
+variable precio = 12.50;
+variable titulo = "El principito";
+variable disponible = verdadero;
+variable resultado = (4 + 2) * 3;
+variable diferencia = 10 - 4;
+variable mezcla = 2 + 3 * 4;
+variable saldo = -5;
+variable total = ejemplares * precio;
+
+# Actualizacion de variables (se conserva el tipo)
+ejemplares = ejemplares + 2;
+precio = precio - 1.50;
+titulo = 'Platero y yo';
+disponible = falso;
+
+imprimir("Titulo: ", titulo);
+imprimir("Ejemplares: ", ejemplares);
+imprimir("Precio: ", precio);
+imprimir("Resultado: ", resultado);
+imprimir("Diferencia: ", diferencia);
+imprimir("Mezcla: ", mezcla);
+imprimir("Saldo: ", saldo);
+imprimir("Total: ", total);

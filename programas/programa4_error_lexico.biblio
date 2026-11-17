@@ -1,0 +1,5 @@
+# Programa 4 - Error lexico: caracter que no pertenece al lenguaje
+variable cantidad = 5;
+variable precio = 12.50;
+variable total = cantidad @ precio;   # ERROR LEXICO: el simbolo @ no existe en BiblioCode
+imprimir("Total: ", total);
