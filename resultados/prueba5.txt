@@ -1,0 +1,2 @@
+Archivo: programas\programa5_error_sintactico.biblio
+ERROR SINTÁCTICO: Se esperaba ';', línea 5, columna 1

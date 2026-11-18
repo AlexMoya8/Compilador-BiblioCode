@@ -1,0 +1,2 @@
+Archivo: programas\programa1_correcto.biblio
+Análisis sintáctico correcto.

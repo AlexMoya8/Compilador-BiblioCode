@@ -1,0 +1,79 @@
+
+(* Gramática BiblioCode - Actividad 5 *)
+
+programa = { instruccion } ;
+
+instruccion = declaracion
+            | asignacion
+            | condicional
+            | ciclo_veces
+            | ciclo_mientras
+            | llamada ;
+
+declaracion = "variable", identificador, "=", expresion, ";" ;
+
+asignacion = identificador, "=", expresion, ";" ;
+
+condicional = "si", expresion, "entonces",
+              { instruccion },
+              [ "sino", { instruccion } ],
+              "fin" ;
+
+ciclo_veces = "ciclo", expresion, "veces",
+              { instruccion }, "fin" ;
+
+ciclo_mientras = "ciclo", "mientras", expresion,
+                 { instruccion }, "fin" ;
+
+llamada = nombre_funcion, "(",
+          [ argumentos ], ")", ";" ;
+
+nombre_funcion = "imprimir" | "leer"
+               | "registrar" | "prestar"
+               | "devolver" | "consultar"
+               | "mostrar" | "eliminar" ;
+
+argumentos = argumento, { ",", argumento } ;
+
+argumento = identificador, "=", expresion
+          | expresion ;
+
+expresion = expresion_logica ;
+
+expresion_logica = comparacion,
+                   { ("y" | "o"), comparacion } ;
+
+comparacion = suma,
+              [ ("==" | ">" | "<"), suma ] ;
+
+suma = producto, { ("+" | "-"), producto } ;
+
+producto = unario, { "*", unario } ;
+
+unario = [ "-" | "no" ], primario ;
+
+primario = identificador
+         | entero
+         | decimal
+         | cadena
+         | booleano
+         | "(", expresion, ")" ;
+
+booleano = "verdadero" | "falso" ;
+
+identificador = letra_o_guion, { letra_o_digito_o_guion } ;
+
+entero = digito, { digito } ;
+
+decimal = entero, ".", entero ;
+
+cadena = '"', { caracter_cadena }, '"'
+       | "'", { caracter_cadena }, "'" ;
+
+letra_o_guion = letra | "_" ;
+
+letra_o_digito_o_guion = letra | digito | "_" ;
+
+letra = "a" | ... | "z" | "A" | ... | "Z" ;
+
+digito = "0" | "1" | ... | "9" ;

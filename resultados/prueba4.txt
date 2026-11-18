@@ -1,0 +1,2 @@
+Archivo: programas\programa4_error_lexico.biblio
+ERROR LÉXICO: Carácter desconocido '@' en línea 4, columna 27

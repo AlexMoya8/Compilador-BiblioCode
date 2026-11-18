@@ -1,0 +1,2 @@
+Archivo: programas\programa6_error_semantico.biblio
+Análisis sintáctico correcto.
